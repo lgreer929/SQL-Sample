@@ -1,4 +1,4 @@
-# SQL-Sample-Rockbuster-Stealth-Data-Analysis
+# SQL Sample Rockbuster Stealth Data Analysis
 Examples of SQL queries for data analysis.
 
 # Key  Questions  and  Objectives   
@@ -13,7 +13,7 @@ The  Rockbuster  Stealth  Management  Board  has  asked  a  series  of  business
 # Data
 Data was provided by Rockbuster as an Excel file.
 
-[Rockbuster Data Set]
+[(http://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip)] - link to Rockbuster Data Set
 
 ![Rockbuster ERD](https://github.com/user-attachments/assets/6cc038a1-6d31-4fda-881d-bb84ce28254d)
 
@@ -22,6 +22,8 @@ Data was provided by Rockbuster as an Excel file.
 PostgreSQL - for data analysis
 
 Tableu - for visualizations
+
+[https://public.tableau.com/shared/YHNMC3CHB?:display_count=n&:origin=viz_share_link] - link to visualizations
 
 # Code
 All queries and their functions can be found in the files above.
