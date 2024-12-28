@@ -12,12 +12,15 @@ The  Rockbuster  Stealth  Management  Board  has  asked  a  series  of  business
 
 # Data
 Data was provided by Rockbuster as an Excel file.
+
 [Rockbuster Data Set]
+
 ![Rockbuster ERD](https://github.com/user-attachments/assets/6cc038a1-6d31-4fda-881d-bb84ce28254d)
 
 
 # Tools
 PostgreSQL - for data analysis
+
 Tableu - for visualizations
 
 # Code
