@@ -1,0 +1,11 @@
+A SQL query to find the most common values from columns of interest:
+
+SELECT	
+	language.name AS most_common_language,
+	MODE() WITHIN GROUP (ORDER BY release_year) AS most_common_release_year,
+	MODE() WITHIN GROUP (ORDER BY film.language_id) AS most_common_language_code,
+	MODE() WITHIN GROUP (ORDER BY rating) AS most_common_rating,
+	MODE() WITHIN GROUP (ORDER BY special_features) AS most_common_special_features
+FROM film	
+INNER JOIN language ON film.language_id =language.language_id	
+GROUP BY language.name;	
