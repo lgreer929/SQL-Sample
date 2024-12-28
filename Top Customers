@@ -1,0 +1,25 @@
+A SQL query to identify the top five customers in previously specified top 10 cities/countries for sales:
+
+SELECT country.country,	
+	city.city,
+	payment.customer_id,
+	customer.first_name,
+	customer.last_name,
+	SUM(payment.amount) AS total_amount_paid
+FROM payment	
+INNER JOIN customer ON payment.customer_id = customer.customer_id	
+INNER JOIN address ON customer.address_id = address.address_id	
+INNER JOIN city ON address.city_id = city.city_id	
+INNER JOIN country ON city.country_id = country.country_id	
+WHERE ((city = 'Aurora' AND country ='United States') OR (city = 'Acua' AND country ='Mexico')	
+	OR (city = 'Citrus Heights' AND country ='United States') OR (city = 'Iwaki' and country ='Japan')
+	OR (city = 'Ambattur' and country ='India') OR (city = 'Shanwei' and country ='China')
+	OR (city = 'So Leopoldo' and country ='Brazil') OR (city = 'Teboksary' and country ='Russian Federation')
+	OR (city = 'Tianjin' and country ='China') OR (city = 'Cianjur' and country ='Indonesia'))
+GROUP BY country.country,	
+	city.city,
+	payment.customer_id,
+	customer.first_name,
+	customer.last_name
+ORDER BY total_amount_paid DESC	
+LIMIT 5;	
