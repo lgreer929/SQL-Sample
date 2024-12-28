@@ -1,0 +1,15 @@
+A SQL query to find the most transactions by city in the previously specified top 10 countries, limiting it to the top 10:
+
+SELECT country.country,	
+	city.city,
+	COUNT(customer.customer_id) AS transactions_by_city
+FROM customer	
+INNER JOIN address ON customer.address_id = address.address_id	
+INNER JOIN city ON address.city_id = city.city_id	
+INNER JOIN country ON city.country_id = country.country_id	
+WHERE country.country IN ('India', 'China', 'United States', 'Japan', 'Mexico',	
+	'Brazil', 'Russian Federation', 'Philippines', 'Turkey', 'Indonesia')
+GROUP BY country.country,	
+	city.city
+ORDER BY transactions_by_city DESC	
+LIMIT 10;	
